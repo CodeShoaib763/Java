@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class SnackGame {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int score = 0;
+        boolean gameRunning = true;
+
+        System.out.println("Welcome to the Snack Game!");
+        
+        while (gameRunning) {
+            System.out.println("Your current score is: " + score);
+            System.out.println("Press '1' to eat a snack, '0' to exit.");
+            int choice = scanner.nextInt();
+
+            if (choice == 1) {
+                score += 10; // Increase score by 10 for eating a snack
+                System.out.println("Yum! You ate a snack.");
+            } else if (choice == 0) {
+                gameRunning = false; // Exit the game
+                System.out.println("Thanks for playing! Your final score is: " + score);
+            } else {
+                System.out.println("Invalid choice. Please try again.");
+            }
+        }
+        scanner.close();
+    }
+}
