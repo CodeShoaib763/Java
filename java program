@@ -1,0 +1,72 @@
+public class AA {
+    void show()
+    {
+        System.out.println("show in AA");
+
+    }
+    void Display()
+    {
+        System.out.println("Display in AA");
+    }
+void xyz()
+{
+    System.out.println("xyz in AA");
+
+}
+
+}
+class B extends AA{
+    void Show()
+    {
+        System.out.println("show in B");
+}
+void Display()
+{
+    System.out.println("Display in b");
+}
+void abc()
+{System.out.println("abc in B");
+
+}
+
+}
+class C extends B{
+void show()
+{
+    System.out.println("show in c");
+
+}
+void Display()
+{
+    System.out.println("Display in c");
+
+}
+void abc()
+{
+    System.out.println("abc in c");
+}
+
+}
+class pen{
+    public static void main(String[] args) {
+        AA a1=new AA();
+        B b1=new B();
+        C c1=new C();
+                     AA r;
+                     r=a1;
+                     r.show();
+                     r.Display();
+                     r.xyz();
+r=b1;
+r.show();
+r.Display();
+r.xyz();
+
+                   r=c1;
+                   r.show();
+                   r.Display();
+                   r.xyz();
+                   
+
+    }
+}
